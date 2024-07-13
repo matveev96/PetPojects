@@ -1,0 +1,12 @@
+{
+  "name": "matveev96-jsfepreschool2024q2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch shelter/pages/main/sass/style.scss shelter/pages/main/sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
