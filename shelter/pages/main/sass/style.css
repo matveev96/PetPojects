@@ -1,0 +1,178 @@
+/* Start shelter styles */
+/* Fonts */
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/ArialMT.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/ArialMT.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/georgia/Georgia.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Arial";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h4 {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.button {
+  padding: 20px 45px;
+  border-radius: 100px;
+  border: 1px solid #292929;
+  background-color: #F1CDB3;
+  font-family: "Georgia";
+  font-size: 1.7rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.06em;
+  color: #292929;
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  height: 6rem;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.header__logo-p {
+  color: #FFFFFF;
+  font-weight: normal;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-align: right;
+  padding-right: 1px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.header__list {
+  display: flex;
+  color: #FAFAFA;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+}
+
+.list__link {
+  list-style: none;
+  margin: 0 17.5px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+  transition: 0.5s;
+}
+
+.list__link:last-child {
+  margin-right: 2px;
+}
+
+.list__link:hover {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.our-friends {
+  background: #F6F6F6;
+}
+
+.donation {
+  background: #F6F6F6;
+}
+
+.start-screen {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.svg), radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
+}
+
+.footer {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.svg), radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
+}
+
+.not-only {
+  padding-top: 120px;
+}
+
+.not-only__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.not-only__content {
+  padding-right: 42px;
+}
+
+/*# sourceMappingURL=style.css.map */
