@@ -3,10 +3,8 @@
     border-radius: 100px;
     border: 1px solid $color-dark-3xl;
     background-color: $color-primary;
-    font-family: 'Georgia';
-    font-size: 1.7rem;
-    line-height: 1.3rem;
-    letter-spacing: 0.06em;
+    @extend %font-add;
+    @include font($size: 1.7rem, $height: 1.3rem, $weight:400, $style:normal, $spacing: 0.06em);
     color: $color-dark-3xl;
     cursor: pointer;
 }
