@@ -1,4 +1,8 @@
+// Abstract
 @import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+// Base
 @import "base/base";
 @import "base/buttons";
 // Layouts
@@ -10,3 +14,5 @@
 @import "components/start-screen";
 @import "components/footer";
 @import "components/not-only";
+@import "components/navigation";
+@import "components/about";
