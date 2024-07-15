@@ -1,3 +1,5 @@
 .start-screen {
-    background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.svg), $start-screen-gradient-background;
+    background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), $start-screen-gradient-background, $start-screen-black-background;
+    
+    background-repeat: initial;
 }
