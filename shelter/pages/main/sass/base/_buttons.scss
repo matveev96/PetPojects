@@ -1,10 +1,31 @@
 .button {
     padding: 20px 45px;
     border-radius: 100px;
-    border: 1px solid $color-dark-3xl;
-    background-color: $color-primary;
+    border: 2px solid $color-primary-light;
+    background-color: transparent;
     @extend %font-add;
     @include font($size: 1.7rem, $height: 1.3rem, $weight:400, $style:normal, $spacing: 0.06em);
     color: $color-dark-3xl;
+    cursor: pointer;
+}
+
+.button_text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button_colored {
+    background-color: $color-primary;
+    border: none;
+}
+
+.button-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid $color-primary;
+    background-color: transparent;
     cursor: pointer;
 }
