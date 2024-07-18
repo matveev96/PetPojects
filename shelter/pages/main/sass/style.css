@@ -1,13 +1,13 @@
-.header__list-link {
+.header__list-link, .button-arrow, .button {
   transition: all 0.3s ease-out;
 }
 
-.about__text, .header__list, .not-only__text, .header__logo-p {
+.about__text, .header__list, .not-only__text, .donation__text, .header__logo-p {
   font-family: "Arial";
   font-style: normal;
 }
 
-.button, h4, h3, h2, h1 {
+.donation__credit-card, .button, h5, h4, h3, h2, h1 {
   font-family: "Georgia", serif;
 }
 
@@ -22,7 +22,7 @@
 }
 @font-face {
   font-family: "Arial";
-  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/ArialMT.woff2") format("woff2");
+  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/Arial-ItalicMT.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -84,12 +84,22 @@ h4 {
   letter-spacing: 0.06em;
   color: #545454;
   text-align: center;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 110%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .button {
   padding: 20px 45px;
   border-radius: 100px;
-  border: 2px solid #FDDCC4;
+  border: 2px solid #F1CDB3;
   background-color: transparent;
   font-size: 1.7rem;
   line-height: 1.3rem;
@@ -98,6 +108,10 @@ h4 {
   letter-spacing: 0.06em;
   color: #292929;
   cursor: pointer;
+}
+.button:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
 }
 
 .button_text-shadow {
@@ -119,6 +133,93 @@ h4 {
   border: 2px solid #F1CDB3;
   background-color: transparent;
   cursor: pointer;
+}
+.button-arrow:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+.help__ico {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.help__ico-pet-food {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/Vector.png) no-repeat center;
+}
+
+.help__ico-transportation {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/transportation.png) no-repeat center;
+}
+
+.help__ico-toys {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/toys.png) no-repeat center;
+}
+
+.help__ico-bowls-and-cups {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/bowls-and-cups.png) no-repeat center;
+}
+
+.help__ico-shampoos {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/shampoos.png) no-repeat center;
+}
+
+.help__ico-vitamins {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/vitamins.png) no-repeat center;
+}
+
+.help__ico-medicines {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/medicines.png) no-repeat center;
+}
+
+.help__ico-collars-leashes {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/collars-or-leashes.png) no-repeat center;
+}
+
+.help__ico-sleeping-areas {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/sleeping-area.png) no-repeat center;
+}
+
+.donation__ico {
+  display: inline-block;
+  margin-right: 15px;
+  width: 30px;
+  height: 23px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/credit-card.svg) no-repeat;
+}
+
+.our-friends__card {
+  width: 270px;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+  cursor: pointer;
+}
+
+.our-friends__card:hover .button {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+.our-friends__card-title {
+  margin: 30px 0;
+}
+
+.our-friends__card-button {
+  padding-bottom: 100px;
+  padding-top: 60px;
+}
+
+.help__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -159,6 +260,46 @@ h4 {
 
 .donation {
   background: #F6F6F6;
+}
+
+.donation__wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.donation__title {
+  margin: 0;
+}
+
+.donation__subtitle {
+  margin: 20px 0 0 0;
+}
+
+.donation__text {
+  max-width: 380px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 150%;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  color: #B2B2B2;
+}
+
+.donation__credit-card {
+  display: inline-block;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #545454;
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  padding: 10px 15px;
+  margin: 20px 0;
 }
 
 .start-screen {
@@ -283,7 +424,6 @@ h4 {
 }
 
 .our-friends__title {
-  max-width: 400px;
   margin-top: 75px;
   margin-bottom: 60px;
   font-size: 3.5rem;
@@ -302,28 +442,33 @@ h4 {
   align-items: center;
 }
 
-.our-friends__card {
-  width: 270px;
-  padding-bottom: 30px;
-  border-radius: 9px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FAFAFA;
-}
-
-.our-friends__card-title {
-  margin: 30px 0;
-}
-
 .our-friends__arrow-img-rotate {
   transform: rotate(180deg);
 }
 
-.our-friends__card-button {
+.help__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help__title {
+  margin: 75px 0 60px 0;
+  font-size: 3.5rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.help__content {
+  max-width: 1026px;
   padding-bottom: 100px;
-  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 119px;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,41 @@
 .donation {
     background: $color-light-l;
 }
+
+.donation__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.donation__img {
+    
+}
+
+.donation__title {
+    margin: 0;
+}
+
+.donation__subtitle {
+    margin: 20px 0 0 0;
+}
+
+.donation__text {
+    max-width: 380px;
+    margin: 0;
+    @include font($size: 1.2rem, $height: 150%, $style: italic);
+    @extend %font-prime;
+    color: $color-dark-m;
+}
+
+.donation__credit-card {
+    display: inline-block;
+    background-color: $color-primary;
+    border-radius: 9px;
+    text-decoration: none;
+    color: $color-dark-l;
+    @extend %font-add;
+    @include font ($size: 2.0rem, $height: 115%, $spacing: 0.06em);
+    padding: 10px 15px;
+    margin: 20px 0;
+}

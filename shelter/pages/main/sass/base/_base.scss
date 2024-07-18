@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Arial';
-    src: url('/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/ArialMT.woff2') format('woff2');
+    src: url('/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/Arial-ItalicMT.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -49,6 +49,7 @@ h2 {
     @extend %font-add;
     @include font ($size: 4.4rem, $height: 130%);
     color: $color-light-xl;
+
 }
 
 h3 {
@@ -62,5 +63,11 @@ h4 {
     @include font ($size: 2.0rem, $height: 115%, $spacing: 0.06em);
     color: $color-dark-l;
     text-align: center;
+    margin: 0;
 }
 
+h5 {
+    @extend %font-add;
+    @include font ($size: 1.5rem, $height: 110%, $spacing: 0.06em);
+    color: $color-dark-l;
+}

@@ -1,0 +1,20 @@
+.help__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help__title {
+    margin: 75px 0 60px 0;
+    @include font($size:3.5rem, $height:130%, $spacing:0.06em);
+    text-align: center;
+}
+
+.help__content {
+    max-width: 1026px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px 119px;
+    justify-content: center;
+}

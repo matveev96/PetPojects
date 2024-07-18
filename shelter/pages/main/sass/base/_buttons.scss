@@ -1,12 +1,17 @@
 .button {
     padding: 20px 45px;
     border-radius: 100px;
-    border: 2px solid $color-primary-light;
+    border: 2px solid $color-primary;
     background-color: transparent;
     @extend %font-add;
+    @extend %transition;
     @include font($size: 1.7rem, $height: 1.3rem, $weight:400, $style:normal, $spacing: 0.06em);
     color: $color-dark-3xl;
     cursor: pointer;
+    &:hover {
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+    }
 }
 
 .button_text-shadow {
@@ -28,4 +33,9 @@
     border: 2px solid $color-primary;
     background-color: transparent;
     cursor: pointer;
+    @extend %transition;
+    &:hover {
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+    }
 }

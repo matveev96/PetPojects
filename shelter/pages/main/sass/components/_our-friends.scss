@@ -11,7 +11,6 @@
 }
 
 .our-friends__title {
-    max-width: 400px;
     margin-top: 75px;
     margin-bottom: 60px;
     @include font($size:3.5rem, $height:130%, $spacing:0.06em);
@@ -26,26 +25,6 @@
     align-items: center;
 }
 
-.our-friends__card {
-    width: 270px;
-    padding-bottom: 30px;
-    border-radius: 9px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $color-light-s;
-}
-
-.our-friends__card-title {
-    margin: 30px 0;
-}
-
 .our-friends__arrow-img-rotate {
     transform: rotate(180deg);
-}
-
-.our-friends__card-button {
-    padding-bottom: 100px;
-    padding-top: 60px;
 }
