@@ -1,0 +1,25 @@
+.our-friends {
+    background: $color-light-l;
+    padding-bottom: 100px;
+}
+
+.our-friends__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-friends__title {
+    margin-top: 83px;
+    margin-bottom: 58px;
+    @include font($size:3.5rem, $height:130%, $spacing:0.06em);
+    text-align: center;
+}
+
+.our-friends__slider {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(2, 435px);
+    row-gap: 30px;
+    column-gap: 40px;
+}

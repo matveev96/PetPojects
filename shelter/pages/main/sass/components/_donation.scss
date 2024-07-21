@@ -1,0 +1,36 @@
+.donation {
+    background: $color-light-l;
+}
+
+.donation__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.donation__content {
+    padding-bottom: 100px;
+    margin-left: 15px;
+}
+
+.donation__img {
+    margin-right: 15px;
+    padding-top: 11px;
+}
+
+.donation__title {
+    margin: 0;
+}
+
+.donation__subtitle {
+    margin: 20px 0 0 0;
+}
+
+.donation__text {
+    max-width: 380px;
+    margin: 0;
+    @include font($size: 1.2rem, $height: 150%, $style: italic);
+    @extend %font-prime;
+    color: $color-dark-m;
+}
+

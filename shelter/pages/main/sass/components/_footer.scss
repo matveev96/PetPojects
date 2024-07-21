@@ -1,0 +1,34 @@
+.footer {
+    background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), $start-screen-gradient-background, $start-screen-black-background;
+    background-repeat: repeat;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.footer__wrapper {
+    display: flex;
+    padding-top: 40px;
+    column-gap: 158px;
+}
+
+.footer__title {
+    max-width: 280px;
+    margin: 16px 0 40px 0;
+    color: $color-light-xl;
+    @include font ($size: 3.5rem, $height: 130%, $spacing:0.06em);
+}
+
+.footer__title-locations {
+    margin-bottom: 32px;
+}
+
+.footer__locations {
+    flex-grow: 1;
+}
+
+.footer__contacts {
+    min-width: 280px;
+}
+
+.footer__locations {
+    min-width: 302px;
+}

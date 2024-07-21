@@ -1,0 +1,34 @@
+.our-friends {
+    background: $color-light-l;
+}
+
+.our-friends__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-friends__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-friends__title {
+    margin-top: 75px;
+    margin-bottom: 60px;
+    @include font($size:3.5rem, $height:130%, $spacing:0.06em);
+    text-align: center;
+}
+
+.our-friends__slider {
+    min-width: 990px;
+    margin: 0 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-friends__arrow-img-rotate {
+    transform: rotate(180deg);
+}

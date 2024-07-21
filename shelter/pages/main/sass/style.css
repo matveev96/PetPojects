@@ -1,0 +1,573 @@
+.header__list-link, .button-arrow, .button {
+  transition: all 0.3s ease-out;
+}
+
+.about__text, .header__list, .not-only__text, .donation__text, .header__logo-p {
+  font-family: "Arial";
+  font-style: normal;
+}
+
+.footer__link-text, .donation__link, .button, h5, h4, h3, h2, h1 {
+  font-family: "Georgia", serif;
+}
+
+/* Start shelter styles */
+/* Fonts */
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/ArialMT.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/Arial-ItalicMT.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/georgia/Georgia.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 110%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+  margin: 0;
+}
+
+h2 {
+  font-size: 4.4rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #545454;
+  text-align: center;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 110%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.button {
+  padding: 20px 45px;
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  background-color: transparent;
+  font-size: 1.7rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #292929;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+.button_text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button_colored {
+  background-color: #F1CDB3;
+  border: none;
+}
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  background-color: transparent;
+  cursor: pointer;
+}
+.button-arrow:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+.help__ico {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.help__ico-pet-food {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/Vector.png) no-repeat center;
+}
+
+.help__ico-transportation {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/transportation.png) no-repeat center;
+}
+
+.help__ico-toys {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/toys.png) no-repeat center;
+}
+
+.help__ico-bowls-and-cups {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/bowls-and-cups.png) no-repeat center;
+}
+
+.help__ico-shampoos {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/shampoos.png) no-repeat center;
+}
+
+.help__ico-vitamins {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/vitamins.png) no-repeat center;
+}
+
+.help__ico-medicines {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/medicines.png) no-repeat center;
+}
+
+.help__ico-collars-leashes {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/collars-or-leashes.png) no-repeat center;
+}
+
+.help__ico-sleeping-areas {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/sleeping-area.png) no-repeat center;
+}
+
+.donation__link-ico {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  width: 30px;
+  height: 23px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/credit-card.svg) no-repeat;
+}
+
+.footer__link-ico-mail {
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 26px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/mail.png) no-repeat;
+}
+
+.footer__link-ico-phone {
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 32px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/phone.png) no-repeat;
+}
+
+.footer__link-ico-location {
+  display: inline-block;
+  margin-right: 20px;
+  width: 22px;
+  height: 32px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/pin.png) no-repeat;
+}
+
+.our-friends__card {
+  width: 270px;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+  cursor: pointer;
+}
+
+.our-friends__card:hover .button {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+.our-friends__card-title {
+  margin: 30px 0;
+}
+
+.our-friends__card-button {
+  padding-bottom: 100px;
+  padding-top: 60px;
+}
+
+.help__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation__link {
+  display: inline-block;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #545454;
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+
+.donation__link-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer__link-mail {
+  margin-bottom: 44px;
+}
+
+.footer__link-city-boston {
+  margin-bottom: 32px;
+}
+
+.footer__link-text {
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  padding-top: 30px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.header__logo-p {
+  font-size: 1.3rem;
+  line-height: 100%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  text-align: right;
+  padding-right: 1px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.donation {
+  background: #F6F6F6;
+}
+
+.donation__wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.donation__content {
+  padding-bottom: 100px;
+  margin-left: 15px;
+}
+
+.donation__img {
+  margin-right: 15px;
+  padding-top: 11px;
+}
+
+.donation__title {
+  margin: 0;
+}
+
+.donation__subtitle {
+  margin: 20px 0 0 0;
+}
+
+.donation__text {
+  max-width: 380px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 150%;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  color: #B2B2B2;
+}
+
+.start-screen {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background-repeat: repeat;
+}
+
+.footer {
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
+  background-repeat: repeat;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.footer__wrapper {
+  display: flex;
+  padding-top: 40px;
+  column-gap: 158px;
+}
+
+.footer__title {
+  max-width: 280px;
+  margin: 16px 0 40px 0;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+}
+
+.footer__title-locations {
+  margin-bottom: 32px;
+}
+
+.footer__locations {
+  flex-grow: 1;
+}
+
+.footer__contacts {
+  min-width: 280px;
+}
+
+.footer__locations {
+  min-width: 302px;
+}
+
+.not-only {
+  padding-top: 92px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.not-only__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.not-only__content {
+  padding-right: 42px;
+  padding-top: 165px;
+}
+
+.not-only__title {
+  max-width: 310px;
+  margin: 0 0 40px;
+}
+
+.not-only__text {
+  max-width: 460px;
+  margin: 0 0 40px;
+  color: #CDCDCD;
+  font-size: 1.5rem;
+  line-height: 160%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.not-only__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header__list {
+  display: flex;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+}
+
+.header__list-item {
+  list-style: none;
+  margin: 0 17.5px;
+  cursor: pointer;
+}
+.header__list-item:last-child {
+  margin-right: 2px;
+}
+
+.header__list-link {
+  text-decoration: none;
+  color: #CDCDCD;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+}
+.header__list-link:hover {
+  border-bottom: 3px solid #F1CDB3;
+  color: #FAFAFA;
+}
+
+.header__list-link-checked {
+  border-bottom: 3px solid #F1CDB3;
+  color: #FAFAFA;
+  cursor: default;
+}
+
+.about {
+  padding: 80px 0 100px 0;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about__img {
+  padding-right: 120px;
+}
+
+.about__title {
+  max-width: 370px;
+  margin: 14px 0 25px 0;
+}
+
+.about__text {
+  max-width: 430px;
+  margin-top: 25px;
+  font-size: 1.5rem;
+  line-height: 160%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  color: #4C4C4C;
+}
+
+.our-friends {
+  background: #F6F6F6;
+}
+
+.our-friends__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-friends__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-friends__title {
+  margin-top: 75px;
+  margin-bottom: 60px;
+  font-size: 3.5rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.our-friends__slider {
+  min-width: 990px;
+  margin: 0 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-friends__arrow-img-rotate {
+  transform: rotate(180deg);
+}
+
+.help__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help__title {
+  margin: 75px 0 60px 0;
+  font-size: 3.5rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.help__content {
+  max-width: 1026px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 119px;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
