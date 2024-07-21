@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter</title>
     <link rel="stylesheet" href="sass/style.css">
+    <link rel="icon" href="/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/pet-favicon.ico">
 </head>
 <body>
     <div class="start-screen">
@@ -17,7 +18,7 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__list-item"><a href="#" class="header__list-link header__list-link-checked">About the shelter</a></li>
-                        <li class="header__list-item"><a href="#our-friends" class="header__list-link">Our pets</a></li>
+                        <li class="header__list-item"><a href="/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/pages/pets/index.html" class="header__list-link">Our pets</a></li>
                         <li class="header__list-item"><a href="#help" class="header__list-link">Help the shelter</a></li>
                         <li class="header__list-item"><a href="#contacts" class="header__list-link">Contacts</a></li>
                     </ul>
@@ -29,7 +30,9 @@
                 <div class="not-only__content">
                     <h2 class="not-only__title">Not only people need a house</h2>
                     <p class="not-only__text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                    <button class="button button_colored button_text-shadow">Make a friend</button>
+                    <form action="file:///Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/pages/main/index.html#our-friends">
+                        <button class="button button_colored button_text-shadow">Make a friend</button>
+                    </form>
                 </div>
                 <div class="not-only__img">
                     <img src="../../assets/images/start-screen-puppy.png" alt="start-screen-puppy">
@@ -74,7 +77,9 @@
                 <div class="button-arrow button-arrow-colored"><img class="our-friends__arrow-img-rotate" src="/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/Arrow.png" alt="arrow"></div>
             </div>
             <div class="our-friends__card-button">
-                <button class="button button_colored">Get to know the rest</button>
+                <form action="/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/pages/pets/index.html" target="_blank">
+                    <button class="button button_colored">Get to know the rest</button>
+                </form>
             </div>
         </div>
     </section>
@@ -139,17 +144,18 @@
             <div class="footer__contacts">
                 <h3 class="footer__title">For questions and suggestions</h3>
                 <a class="footer-link footer__link-mail" href="mailto:email@shelter.com"><span class="link-ico footer__link-ico-mail"></span><span class="link-text footer__link-text">email@shelter.com</span></a>
-                <a class="footer-link footer__link-phone" href="tel:+13 674 567 75 54"><span class="link-ico footer__link-ico-phone"></span><span class="link-text footer__link-text">+13 674 567 75 54</span></a>
+                <a class="footer-link footer__link-phone" href="tel:+136745677554"><span class="link-ico footer__link-ico-phone"></span><span class="link-text footer__link-text">+13 674 567 75 54</span></a>
             </div>
             <div class="footer__locations">
                 <h3 class="footer__title footer__title-locations">We are waiting for your visit</h3>
-                <a class="footer-link footer__link-city-boston" href="#!"><span class="link-ico footer__link-ico-location"></span><span class="link-text footer__link-text">1 Central Street, Boston <br> (entrance from the store)</span></a>
-                <a class="footer-link footer__link-city-london" href="#!"><span class="link-ico footer__link-ico-location"></span><span class="link-text footer__link-text">18 South Park, London</span></a>
+                <a class="footer-link footer__link-city-boston" href="https://www.google.com/maps/place/Center+Plaza/@42.3597641,-71.062786,17z/data=!3m2!4b1!5s0x89e37a1b3b7859b7:0xbea62e440d76c86d!4m6!3m5!1s0x89e37085215d1201:0xc34eff53266faf23!8m2!3d42.3597602!4d-71.0602111!16s%2Fg%2F11c6v9f_mv?entry=ttu" target="_blank"><span class="link-ico footer__link-ico-location"></span><span class="link-text footer__link-text">1 Central Street, Boston <br> (entrance from the store)</span></a>
+                <a class="footer-link footer__link-city-london" href="https://www.google.com/maps/search/18+South+Park,+London/@51.5287398,-0.266405,11z/data=!3m1!4b1?entry=ttu" target="_blank"><span class="link-ico footer__link-ico-location"></span><span class="link-text footer__link-text">18 South Park, London</span></a>
             </div>
             <div class="footer__img">
                 <img src="../../assets/images/footer-puppy.png" alt="footer-puppy">
             </div>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
