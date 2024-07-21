@@ -322,10 +322,6 @@ h5 {
   padding-top: 10px;
 }
 
-.our-friends {
-  background: #F6F6F6;
-}
-
 .donation {
   background: #F6F6F6;
 }
@@ -366,13 +362,14 @@ h5 {
 }
 
 .start-screen {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   background-repeat: repeat;
 }
 
 .footer {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
   background-repeat: repeat;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .footer__wrapper {
@@ -476,6 +473,7 @@ h5 {
 .header__list-link-checked {
   border-bottom: 3px solid #F1CDB3;
   color: #FAFAFA;
+  cursor: default;
 }
 
 .about {
@@ -506,6 +504,10 @@ h5 {
   font-style: normal;
   letter-spacing: 0;
   color: #4C4C4C;
+}
+
+.our-friends {
+  background: #F6F6F6;
 }
 
 .our-friends__wrapper {
