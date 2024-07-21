@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-.donation__credit-card, .button, h5, h4, h3, h2, h1 {
+.footer__link-text, .donation__link, .button, h5, h4, h3, h2, h1 {
   font-family: "Georgia", serif;
 }
 
@@ -181,12 +181,37 @@ h5 {
   background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/sleeping-area.png) no-repeat center;
 }
 
-.donation__ico {
+.donation__link-ico {
   display: inline-block;
+  vertical-align: top;
   margin-right: 15px;
   width: 30px;
   height: 23px;
   background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/credit-card.svg) no-repeat;
+}
+
+.footer__link-ico-mail {
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 26px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/mail.png) no-repeat;
+}
+
+.footer__link-ico-phone {
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 32px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/phone.png) no-repeat;
+}
+
+.footer__link-ico-location {
+  display: inline-block;
+  margin-right: 20px;
+  width: 22px;
+  height: 32px;
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/pin.png) no-repeat;
 }
 
 .our-friends__card {
@@ -220,6 +245,49 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.donation__link {
+  display: inline-block;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #545454;
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+
+.donation__link-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer__link-mail {
+  margin-bottom: 44px;
+}
+
+.footer__link-city-boston {
+  margin-bottom: 32px;
+}
+
+.footer__link-text {
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
 }
 
 .wrapper {
@@ -268,6 +336,16 @@ h5 {
   padding-top: 80px;
 }
 
+.donation__content {
+  padding-bottom: 100px;
+  margin-left: 15px;
+}
+
+.donation__img {
+  margin-right: 15px;
+  padding-top: 11px;
+}
+
 .donation__title {
   margin: 0;
 }
@@ -287,28 +365,47 @@ h5 {
   color: #B2B2B2;
 }
 
-.donation__credit-card {
-  display: inline-block;
-  background-color: #F1CDB3;
-  border-radius: 9px;
-  text-decoration: none;
-  color: #545454;
-  font-size: 2rem;
-  line-height: 115%;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.06em;
-  padding: 10px 15px;
-  margin: 20px 0;
-}
-
 .start-screen {
   background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
   background-repeat: repeat;
 }
 
 .footer {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.svg), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
+  background-repeat: repeat;
+}
+
+.footer__wrapper {
+  display: flex;
+  padding-top: 40px;
+  column-gap: 158px;
+}
+
+.footer__title {
+  max-width: 280px;
+  margin: 16px 0 40px 0;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+}
+
+.footer__title-locations {
+  margin-bottom: 32px;
+}
+
+.footer__locations {
+  flex-grow: 1;
+}
+
+.footer__contacts {
+  min-width: 280px;
+}
+
+.footer__locations {
+  min-width: 302px;
 }
 
 .not-only {
