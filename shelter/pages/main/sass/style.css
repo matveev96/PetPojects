@@ -15,21 +15,21 @@
 /* Fonts */
 @font-face {
   font-family: "Arial";
-  src: url("../../assets/fonts/arial/ArialMT.woff2") format("woff2");
+  src: url("../../../assets/fonts/arial/ArialMT.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Arial";
-  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/arial/Arial-ItalicMT.woff2") format("woff2");
+  src: url("../../../assets/fonts/arial/Arial-ItalicMT.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Georgia";
-  src: url("/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/fonts/georgia/Georgia.woff2") format("woff2");
+  src: url("../../../assets/fonts/georgia/Georgia.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -146,39 +146,35 @@ h5 {
 }
 
 .help__ico-pet-food {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/Vector.png) no-repeat center;
+  background: url(../../../assets/icons/help/Vector.png) no-repeat center;
 }
 
 .help__ico-transportation {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/transportation.png) no-repeat center;
+  background: url(../../../assets/icons/help/transportation.png) no-repeat center;
 }
 
 .help__ico-toys {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/toys.png) no-repeat center;
-}
-
-.help__ico-bowls-and-cups {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/bowls-and-cups.png) no-repeat center;
+  background: url(../../../assets/icons/help/bowls-and-cups.png) no-repeat center;
 }
 
 .help__ico-shampoos {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/shampoos.png) no-repeat center;
+  background: url(../../../assets/icons/help/shampoos.png) no-repeat center;
 }
 
 .help__ico-vitamins {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/vitamins.png) no-repeat center;
+  background: url(../../../assets/icons/help/vitamins.png) no-repeat center;
 }
 
 .help__ico-medicines {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/medicines.png) no-repeat center;
+  background: url(../../../assets/icons/help/medicines.png) no-repeat center;
 }
 
 .help__ico-collars-leashes {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/collars-or-leashes.png) no-repeat center;
+  background: url(../../../assets/icons/help/collars-or-leashes.png) no-repeat center;
 }
 
 .help__ico-sleeping-areas {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/help/sleeping-area.png) no-repeat center;
+  background: url(../../../assets/icons/help/sleeping-area.png) no-repeat center;
 }
 
 .donation__link-ico {
@@ -187,7 +183,7 @@ h5 {
   margin-right: 15px;
   width: 30px;
   height: 23px;
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/credit-card.svg) no-repeat;
+  background: url(../../../assets/icons/credit-card.svg) no-repeat;
 }
 
 .footer__link-ico-mail {
@@ -195,7 +191,7 @@ h5 {
   margin-right: 20px;
   width: 40px;
   height: 26px;
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/mail.png) no-repeat;
+  background: url(../../../assets/icons/footer/mail.png) no-repeat;
 }
 
 .footer__link-ico-phone {
@@ -203,7 +199,7 @@ h5 {
   margin-right: 20px;
   width: 40px;
   height: 32px;
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/phone.png) no-repeat;
+  background: url(../../../assets/icons/footer/phone.png) no-repeat;
 }
 
 .footer__link-ico-location {
@@ -211,7 +207,7 @@ h5 {
   margin-right: 20px;
   width: 22px;
   height: 32px;
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/icons/footer/pin.png) no-repeat;
+  background: url(../../../assets/icons/footer/pin.png) no-repeat;
 }
 
 .our-friends__card {
@@ -362,12 +358,12 @@ h5 {
 }
 
 .start-screen {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: url(../../../assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   background-repeat: repeat;
 }
 
 .footer {
-  background: url(/Users/aleksandrmatveev/Desktop/matveev96-JSFEPRESCHOOL2024Q2/shelter/assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
+  background: url(../../../assets/images/noise_transparent@2x.png), radial-gradient(60% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211f20;
   background-repeat: repeat;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
