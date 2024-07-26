@@ -9,6 +9,10 @@
     align-items: center;
     background-color: $color-light-s;
     cursor: pointer;
+    @extend %transition;
+    &:hover {
+        box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
 }
 
 .our-friends__card:hover .button{

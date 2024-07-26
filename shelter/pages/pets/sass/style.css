@@ -1,4 +1,4 @@
-.header__list-link, .our-friends__button-paginator, .button {
+.header__list-link, .our-friends__card, .our-friends__button-paginator, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -134,7 +134,7 @@ h5 {
 
 .our-friends__b-p-inactive {
   border-color: #CDCDCD;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .our-friends__button-paginator-num {
@@ -188,6 +188,9 @@ h5 {
   align-items: center;
   background-color: #FAFAFA;
   cursor: pointer;
+}
+.our-friends__card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .our-friends__card:hover .button {
@@ -304,12 +307,12 @@ h5 {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.6rem;
+  cursor: pointer;
 }
 
 .header__list-item {
   list-style: none;
   margin: 0 17.5px;
-  cursor: pointer;
 }
 .header__list-item:last-child {
   margin-right: 2px;
@@ -318,16 +321,15 @@ h5 {
 .header__list-link {
   text-decoration: none;
   color: #545454;
-  padding-bottom: 3px;
-  border-bottom: 3px solid transparent;
 }
 .header__list-link:hover {
-  border-bottom: 3px solid #F1CDB3;
   color: #292929;
 }
 
 .header__list-link-checked {
+  text-decoration: none;
   border-bottom: 3px solid #F1CDB3;
+  padding-bottom: 3px;
   color: #545454;
   cursor: default;
 }
