@@ -448,12 +448,12 @@ h5 {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.6rem;
+  cursor: pointer;
 }
 
 .header__list-item {
   list-style: none;
   margin: 0 17.5px;
-  cursor: pointer;
 }
 .header__list-item:last-child {
   margin-right: 2px;
@@ -466,7 +466,6 @@ h5 {
   border-bottom: 3px solid transparent;
 }
 .header__list-link:hover {
-  border-bottom: 3px solid #F1CDB3;
   color: #FAFAFA;
 }
 
