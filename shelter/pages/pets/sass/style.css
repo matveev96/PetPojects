@@ -1,4 +1,4 @@
-.header__list-link, .our-friends__button-paginator, .button {
+.header__list-link, .our-friends__card, .our-friends__button-paginator, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -134,7 +134,7 @@ h5 {
 
 .our-friends__b-p-inactive {
   border-color: #CDCDCD;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .our-friends__button-paginator-num {
@@ -188,6 +188,9 @@ h5 {
   align-items: center;
   background-color: #FAFAFA;
   cursor: pointer;
+}
+.our-friends__card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .our-friends__card:hover .button {

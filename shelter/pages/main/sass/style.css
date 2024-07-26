@@ -1,4 +1,4 @@
-.header__list-link, .button-arrow, .button {
+.header__list-link, .our-friends__card, .button-arrow, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -224,6 +224,9 @@ h5 {
   align-items: center;
   background-color: #FAFAFA;
   cursor: pointer;
+}
+.our-friends__card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .our-friends__card:hover .button {
