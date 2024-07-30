@@ -27,6 +27,21 @@
 .our-friends__card-button {
     padding-bottom: 100px;
     padding-top: 60px;
+    @include media-tablet {
+        padding-top: 55px;
+    }
+}
+
+.our-friends__card-tablet-none {
+    @include media-laptop {
+        display: none;
+    }
+}
+
+.our-friends__card-mobile-none {
+    @include media-burger {
+        display: none;
+    }
 }
 // Help
 .help__card {

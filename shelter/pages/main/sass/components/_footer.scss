@@ -8,6 +8,9 @@
     display: flex;
     padding-top: 40px;
     column-gap: 158px;
+    @include media-laptop {
+        flex-wrap: wrap;
+    }
 }
 
 .footer__title {

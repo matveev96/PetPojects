@@ -49,13 +49,18 @@ h2 {
     @extend %font-add;
     @include font ($size: 4.4rem, $height: 130%);
     color: $color-light-xl;
-
+    @include media-mobile {
+        @include font ($size: 2.5rem, $height: 130%, $spacing: 0.06em);
+    }
 }
 
 h3 {
     @extend %font-add;
     @include font ($size: 3.5rem, $height: 130%, $spacing: 0.06em);
     color: $color-dark-l;
+    @include media-mobile {
+        @include font ($size: 2.5rem, $height: 130%, $spacing: 0.06em);
+    }
 }
 
 h4 {
