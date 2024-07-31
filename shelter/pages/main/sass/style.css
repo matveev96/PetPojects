@@ -104,6 +104,15 @@ h4 {
   text-align: center;
   margin: 0;
 }
+@media (max-width: 320px) {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 110%;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.06em;
+  }
+}
 
 h5 {
   font-size: 1.5rem;
@@ -112,6 +121,15 @@ h5 {
   font-style: normal;
   letter-spacing: 0.06em;
   color: #545454;
+}
+@media (max-width: 320px) {
+  h5 {
+    font-size: 1.5rem;
+    line-height: 160%;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+  }
 }
 
 .button {
@@ -177,42 +195,52 @@ h5 {
   width: 60px;
   height: 60px;
   margin-bottom: 30px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .help__ico {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 .help__ico-pet-food {
-  background: url(../../../assets/icons/help/Vector.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/Vector.png);
 }
 
 .help__ico-transportation {
-  background: url(../../../assets/icons/help/transportation.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/transportation.png);
 }
 
 .help__ico-toys {
-  background: url(../../../assets/icons/help/toys.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/toys.png);
 }
 
 .help__ico-bowls-and-cups {
-  background: url(../../../assets/icons/help/bowls-and-cups.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/bowls-and-cups.png);
 }
 
 .help__ico-shampoos {
-  background: url(../../../assets/icons/help/shampoos.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/shampoos.png);
 }
 
 .help__ico-vitamins {
-  background: url(../../../assets/icons/help/vitamins.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/vitamins.png);
 }
 
 .help__ico-medicines {
-  background: url(../../../assets/icons/help/medicines.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/medicines.png);
 }
 
 .help__ico-collars-leashes {
-  background: url(../../../assets/icons/help/collars-or-leashes.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/collars-or-leashes.png);
 }
 
 .help__ico-sleeping-areas {
-  background: url(../../../assets/icons/help/sleeping-area.png) no-repeat center;
+  background-image: url(../../../assets/icons/help/sleeping-area.png);
 }
 
 .donation__link-ico {
@@ -270,6 +298,11 @@ h5 {
 
 .our-friends__card-title {
   margin: 30px 0;
+  font-size: 2rem;
+  line-height: 115%;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
 }
 
 .our-friends__card-button {
@@ -279,6 +312,11 @@ h5 {
 @media (max-width: 768px) {
   .our-friends__card-button {
     padding-top: 55px;
+  }
+}
+@media (max-width: 320px) {
+  .our-friends__card-button {
+    padding-bottom: 42px;
   }
 }
 
@@ -300,6 +338,16 @@ h5 {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .help__card {
+    flex-basis: 170px;
+  }
+}
+@media (max-width: 320px) {
+  .help__card {
+    flex-basis: 130px;
+  }
+}
 
 .donation__link {
   display: inline-block;
@@ -320,11 +368,45 @@ h5 {
   display: inline-block;
   vertical-align: top;
 }
+@media (max-width: 1200px) {
+  .donation__link-text {
+    font-size: 1.5rem;
+    line-height: 115%;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    vertical-align: baseline;
+  }
+}
+@media (max-width: 768px) {
+  .donation__link-text {
+    font-size: 2rem;
+    line-height: 115%;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.06em;
+  }
+}
+@media (max-width: 767px) {
+  .donation__link-text {
+    font-size: 1.5rem;
+    line-height: 110%;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.06em;
+  }
+}
 
 .footer-link {
   display: flex;
   align-items: center;
   text-decoration: none;
+}
+
+@media (max-width: 320px) {
+  .footer-link-contacts {
+    justify-content: center;
+  }
 }
 
 .footer__link-mail {
@@ -333,6 +415,12 @@ h5 {
 
 .footer__link-city-boston {
   margin-bottom: 32px;
+}
+@media (max-width: 320px) {
+  .footer__link-city-boston {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .footer__link-text {
@@ -434,19 +522,67 @@ h5 {
   justify-content: center;
   padding-top: 80px;
 }
+@media (max-width: 768px) {
+  .donation__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 97px;
+  }
+}
+@media (max-width: 320px) {
+  .donation__wrapper {
+    padding-top: 42px;
+    padding-bottom: 40px;
+  }
+}
 
 .donation__content {
   padding-bottom: 100px;
   margin-left: 15px;
+}
+@media (max-width: 768px) {
+  .donation__content {
+    padding-bottom: 60px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 320px) {
+  .donation__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 42px;
+  }
 }
 
 .donation__img {
   margin-right: 15px;
   padding-top: 11px;
 }
+@media (max-width: 768px) {
+  .donation__img {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.donation__img img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 320px) {
+  .donation__img img {
+    max-width: 260px;
+  }
+}
 
 .donation__title {
   margin: 0;
+}
+@media (max-width: 320px) {
+  .donation__title {
+    text-align: center;
+  }
 }
 
 .donation__subtitle {
@@ -462,6 +598,12 @@ h5 {
   font-style: italic;
   letter-spacing: 0;
   color: #B2B2B2;
+}
+@media (max-width: 320px) {
+  .donation__text {
+    margin: 0 10px 0 10px;
+    text-align: justify;
+  }
 }
 
 .start-screen {
@@ -483,6 +625,15 @@ h5 {
 @media (max-width: 1200px) {
   .footer__wrapper {
     flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 65px;
+    column-gap: 60px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .footer__wrapper {
+    row-gap: 40px;
   }
 }
 
@@ -490,27 +641,55 @@ h5 {
   max-width: 280px;
   margin: 16px 0 40px 0;
   color: #FFFFFF;
-  font-size: 3.5rem;
-  line-height: 130%;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.06em;
+}
+@media (max-width: 1200px) {
+  .footer__title {
+    margin-top: 0;
+  }
+}
+@media (max-width: 320px) {
+  .footer__title {
+    text-align: center;
+  }
 }
 
 .footer__title-locations {
   margin-bottom: 32px;
 }
+@media (max-width: 320px) {
+  .footer__title-locations {
+    margin: 0 auto;
+  }
+}
 
 .footer__locations {
+  min-width: 302px;
   flex-grow: 1;
+}
+@media (max-width: 1200px) {
+  .footer__locations {
+    flex-grow: 0;
+  }
 }
 
 .footer__contacts {
   min-width: 280px;
 }
 
-.footer__locations {
-  min-width: 302px;
+.footer__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer__img img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 320px) {
+  .footer__img img {
+    max-width: 260px;
+  }
 }
 
 .not-only {
@@ -792,12 +971,17 @@ h5 {
 
 .help__title {
   margin: 75px 0 60px 0;
-  font-size: 3.5rem;
-  line-height: 130%;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.06em;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .help__title {
+    margin: 80px 0 55px 0;
+  }
+}
+@media (max-width: 320px) {
+  .help__title {
+    margin: 40px 0 42px 0;
+  }
 }
 
 .help__content {
@@ -807,6 +991,19 @@ h5 {
   flex-wrap: wrap;
   gap: 55px 119px;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .help__content {
+    gap: 55px 60px;
+  }
+}
+@media (max-width: 320px) {
+  .help__content {
+    gap: 30px 30px;
+    justify-content: flex-start;
+    margin: 0 4px 0 5px;
+    padding-bottom: 42px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

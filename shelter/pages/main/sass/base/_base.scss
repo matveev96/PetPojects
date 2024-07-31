@@ -69,10 +69,16 @@ h4 {
     color: $color-dark-l;
     text-align: center;
     margin: 0;
+    @include media-mobile {
+        @include font ($size: 1.5rem, $height: 110%, $spacing: 0.06em);
+    }
 }
 
 h5 {
     @extend %font-add;
     @include font ($size: 1.5rem, $height: 110%, $spacing: 0.06em);
     color: $color-dark-l;
+    @include media-mobile {
+        @include font ($size: 1.5rem, $height: 160%);
+    }
 }
