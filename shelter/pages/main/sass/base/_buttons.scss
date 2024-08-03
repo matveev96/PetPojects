@@ -14,15 +14,11 @@
     }
 }
 
-.button_text-shadow {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
 .button_colored {
     background-color: $color-primary;
     border: none;
 }
-
+// Our-friends
 .button-arrow {
     display: flex;
     align-items: center;
@@ -37,5 +33,21 @@
     &:hover {
         background-color: $color-primary-light;
         border-color: $color-primary-light;
+    }
+}
+
+.button-arrow-left {
+    @include media-burger {
+        position: absolute;
+        bottom: -68px;
+        left: 55px;
+    }
+}
+
+.button-arrow-right {
+    @include media-burger {
+        position: absolute;
+        bottom: -68px;
+        right: 55px;
     }
 }

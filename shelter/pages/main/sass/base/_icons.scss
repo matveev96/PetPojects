@@ -3,42 +3,51 @@
     width: 60px;
     height: 60px;
     margin-bottom: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include media-burger {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        
+    }
 }
 
 .help__ico-pet-food {
-    background: url(../../../assets/icons/help/Vector.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/Vector.png);
 }
 
 .help__ico-transportation {
-    background: url(../../../assets/icons/help/transportation.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/transportation.png);
 }
 
 .help__ico-toys {
-    background: url(../../../assets/icons/help/toys.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/toys.png);
 }
 
 .help__ico-bowls-and-cups {
-    background: url(../../../assets/icons/help/bowls-and-cups.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/bowls-and-cups.png);
 }
 
 .help__ico-shampoos {
-    background: url(../../../assets/icons/help/shampoos.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/shampoos.png);
 }
 
 .help__ico-vitamins {
-    background: url(../../../assets/icons/help/vitamins.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/vitamins.png);
 }
 
 .help__ico-medicines {
-    background: url(../../../assets/icons/help/medicines.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/medicines.png);
 }
 
 .help__ico-collars-leashes {
-    background: url(../../../assets/icons/help/collars-or-leashes.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/collars-or-leashes.png);
 }
 
 .help__ico-sleeping-areas {
-    background: url(../../../assets/icons/help/sleeping-area.png) no-repeat center;
+    background-image: url(../../../assets/icons/help/sleeping-area.png);
 }
 
 // Donations
