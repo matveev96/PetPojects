@@ -1,6 +1,12 @@
 .our-friends {
     background: $color-light-l;
     padding-bottom: 100px;
+    @include media-tablet {
+        padding-bottom: 76px;
+    }
+    @include media-mobile {
+        padding-bottom: 42px;
+    }
 }
 
 .our-friends__wrapper {
@@ -12,14 +18,34 @@
 .our-friends__title {
     margin-top: 83px;
     margin-bottom: 58px;
-    @include font($size:3.5rem, $height:130%, $spacing:0.06em);
     text-align: center;
+    @include media-tablet {
+        margin-bottom: 30px;
+    }
+    @include media-mobile {
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+    
 }
 
 .our-friends__slider {
     display: grid;
-    grid-template-columns: repeat(4, 270px);
-    grid-template-rows: repeat(2, 435px);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 270px);
     row-gap: 30px;
     column-gap: 40px;
+    width: 100%;
+}
+
+.our-friends__tablet-card-none {
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.our-friends__mobile-card-none {
+    @include media-mobile {
+        display: none;
+    }
 }
