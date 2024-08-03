@@ -150,10 +150,6 @@ h5 {
   border-color: #FDDCC4;
 }
 
-.button_text-shadow {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
 .button_colored {
   background-color: #F1CDB3;
   border: none;
