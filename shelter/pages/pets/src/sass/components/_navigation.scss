@@ -1,0 +1,36 @@
+.header__list {
+    display: flex;
+    @extend %font-prime;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    cursor: pointer;
+    @include media-burger {
+        display: none;
+    }
+}
+
+.header__list-item {
+    list-style: none;
+    margin: 0 17.5px;
+    &:last-child {
+        margin-right: 2px;
+    }   
+}
+
+.header__list-link {
+    text-decoration: none;
+    color: $color-dark-l;
+    @extend %transition;
+    &:hover {
+        color: $color-dark-3xl;
+    }
+}
+
+.header__list-link-checked {
+    text-decoration: none;
+    border-bottom: 3px solid $color-primary;
+    padding-bottom: 3px;
+    color: $color-dark-l;
+    cursor: default;
+}
