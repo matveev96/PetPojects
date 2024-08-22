@@ -12,6 +12,8 @@
     position: relative;
     width: 30px;
     height: 22px;
+    z-index: 999;
+    @extend %transition;
     @include media-burger {
         display: inline-block;
     }
@@ -27,8 +29,21 @@
     }
 }
 
+.humburger.active {
+    transform: rotate(-90deg);
+}
+
 .humburger_line {
     @extend %humburger-line;
     top: calc(50% - 1px);
     left: 0;
+}
+
+.background_screen.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $burger-menu-background;
 }
