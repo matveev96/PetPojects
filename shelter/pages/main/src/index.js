@@ -1,1 +1,32 @@
-console.log(' Все пункты выполнены в полном объеме. \n Суммарная оценка за работу 100 баллов\n Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +14 \n Вёрстка страницы Main соответствует макету при ширине экрана 768px: +14 \n Вёрстка страницы Main соответствует макету при ширине экрана 320px: +14 \n Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки, справа от отдельных блоков не появляются белые поля. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +20 \n Верстка резиновая:на странице Main: +4 \n При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню: +4 \n Верстка обеих страниц валидная: для проверки валидности вёрстки используйте сервис https://validator.w3.org/ : +8');
+//Burger menu
+
+const humburger = document.querySelector(".humburger");
+
+const offScreenMenu = document.querySelector(".header__mobile-menu");
+
+const backgroundScreenMenu = document.querySelector(".background_screen");
+
+const body = document.querySelector("body");
+
+const listItems = document.querySelector(".header__list");
+
+humburger.addEventListener("click", () => {
+  humburger.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+  backgroundScreenMenu.classList.toggle("active");
+  body.classList.toggle("menu-opend");
+});
+
+backgroundScreenMenu.addEventListener("click", () => {
+    humburger.classList.remove("active");
+    offScreenMenu.classList.remove("active");
+    backgroundScreenMenu.classList.remove("active");
+    body.classList.remove("menu-opend");
+});
+
+listItems.addEventListener("click", () => {
+    humburger.classList.remove("active");
+    offScreenMenu.classList.remove("active");
+    backgroundScreenMenu.classList.remove("active");
+    body.classList.remove("menu-opend");
+});
