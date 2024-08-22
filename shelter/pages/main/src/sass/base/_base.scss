@@ -38,6 +38,10 @@ body {
     margin: 0;
 }
 
+body.menu-opend {
+    overflow: hidden;
+}
+
 h1 {
     @extend %font-add;
     @include font ($size: 3.2rem, $height: 110%, $spacing: 0.06em);
