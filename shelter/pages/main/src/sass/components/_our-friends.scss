@@ -28,21 +28,33 @@
     }
 }
 
-.our-friends__slider {
-    max-width: 990px;
+.our-friends__slider-wrapper {
+    display: flex;
     margin: 0 53px;
+    width: 990px;
+    overflow: hidden;
+    @include media-laptop {
+        width: 580px;
+        overflow: hidden;
+        margin: 0 12px;
+    }
+    @include media-burger {
+        width: 270px;
+        overflow: hidden;
+    }
+}
+
+.our-friends__slider {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 90px;
     @include media-laptop {
-        justify-content: center;
         gap: 40px;
-        margin: 0 12px;
     }
 }
 
 .our-friends__arrow-img-rotate {
     transform: rotate(180deg);
 }
-

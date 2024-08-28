@@ -1,5 +1,6 @@
 // Our Friends
 .our-friends__card {
+    position: relative;
     width: 270px;
     padding-bottom: 30px;
     border-radius: 9px;
@@ -9,7 +10,6 @@
     align-items: center;
     background-color: $color-light-s;
     cursor: pointer;
-    @extend %transition;
     &:hover {
         box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
@@ -36,17 +36,6 @@
     }
 }
 
-.our-friends__card-tablet-none {
-    @include media-laptop {
-        display: none;
-    }
-}
-
-.our-friends__card-mobile-none {
-    @include media-burger {
-        display: none;
-    }
-}
 // Help
 .help__card {
     display: flex;
