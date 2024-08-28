@@ -1,13 +1,8 @@
 //Burger menu
-
 const humburger = document.querySelector(".humburger");
-
 const offScreenMenu = document.querySelector(".header__mobile-menu");
-
 const backgroundScreenMenu = document.querySelector(".background_screen");
-
 const body = document.querySelector("body");
-
 const listItems = document.querySelector(".header__list");
 
 humburger.addEventListener("click", () => {
