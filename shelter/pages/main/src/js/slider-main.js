@@ -12,7 +12,7 @@ let sliderArr = []; // array of slider elements
 
 // Add random elements in slider
 for (let i = 0; i < CARDS.length; i++) {
-    sliderArr.push(`<div class="our-friends__card ${i}"> ${CARDS[i].innerHTML} </div>`);
+    sliderArr.push(`<div class="our-friends__card" data-id="${i}"> ${CARDS[i].innerHTML} </div>`);
     CARDS[i].remove();
 };
 sliderArr.sort(() => Math.random() - 0.5);
