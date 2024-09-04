@@ -1,4 +1,4 @@
-.header__list-link, .header__mobile-menu, .humburger, .button-arrow, .button {
+.header__list-link, .header__mobile-menu, .modal__close-icon, .humburger, .button-arrow, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -657,6 +657,10 @@ h5 {
   .modal__close-icon {
     right: -30px;
   }
+}
+.modal__close-icon:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
 }
 
 .wrapper {
