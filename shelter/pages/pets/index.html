@@ -33,54 +33,57 @@
     <section class="our-friends" id="our-friends">
         <div class="wrapper our-friends__wrapper">
             <h3 class="our-friends__title">Our friends who <br> are looking for a house</h3>
-            <div class="our-friends__slider">
-                <div class="our-friends__card">
-                    <img src="../../assets/images/pets/pets-katrine.png" alt="katrine">
-                    <h4 class="our-friends__card-title">Katrine</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card">
-                    <img src="../../assets/images/pets/pets-jennifer.png" alt="jennifer">
-                    <h4 class="our-friends__card-title">Jennifer</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card">
-                    <img src="../../assets/images/pets/pets-woody.png" alt="woody">
-                    <h4 class="our-friends__card-title">Woody</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card our-friends__mobile-card-none">
-                    <img src="../../assets/images/pets/pets-sophia.png" alt="woody">
-                    <h4 class="our-friends__card-title">Sophia</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card our-friends__mobile-card-none">
-                    <img src="../../assets/images/pets/pets-timmy.png" alt="woody">
-                    <h4 class="our-friends__card-title">Timmy</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card our-friends__mobile-card-none">
-                    <img src="../../assets/images/pets/pets-charly.png" alt="woody">
-                    <h4 class="our-friends__card-title">Charly</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card our-friends__tablet-card-none">
-                    <img src="../../assets/images/pets/pets-scarlet.png" alt="woody">
-                    <h4 class="our-friends__card-title">Scarlett</h4>
-                    <button class="button button_bordered">Learn more</button>
-                </div>
-                <div class="our-friends__card our-friends__tablet-card-none">
-                    <img src="../../assets/images/pets/pets-freddie.png" alt="woody">
-                    <h4 class="our-friends__card-title">Freddie</h4>
-                    <button class="button button_bordered">Learn more</button>
+            <div class="our-friends__slider-wrapper" id="slider-wrapper">
+                <div class="our-friends__slider" id="slider">
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-katrine.png" alt="katrine">
+                        <h4 class="our-friends__card-title">Katrine</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-jennifer.png" alt="jennifer">
+                        <h4 class="our-friends__card-title">Jennifer</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-woody.png" alt="woody">
+                        <h4 class="our-friends__card-title">Woody</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-sophia.png" alt="woody">
+                        <h4 class="our-friends__card-title">Sophia</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-timmy.png" alt="woody">
+                        <h4 class="our-friends__card-title">Timmy</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-charly.png" alt="woody">
+                        <h4 class="our-friends__card-title">Charly</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-scarlet.png" alt="woody">
+                        <h4 class="our-friends__card-title">Scarlett</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
+                    <div class="our-friends__card">
+                        <img src="../../assets/images/pets/pets-freddie.png" alt="woody">
+                        <h4 class="our-friends__card-title">Freddie</h4>
+                        <button class="button button_bordered">Learn more</button>
+                    </div>
                 </div>
             </div>
+            
             <div class="our-friends__buttons">
-                <button class="our-friends__button-paginator our-friends__b-p-inactive" disabled><img src="../../assets/images/our_friends/arrows_inactive.png" alt="arrow"></button>
-                <button class="our-friends__button-paginator our-friends__b-p-inactive" disabled><img src="../../assets/images/our_friends/arrow_inactive.png" alt="arrow"></button>
-                <button class="our-friends__button-paginator our-friends__button-paginator-num">1</button>
-                <button class="our-friends__button-paginator our-friends__button-paginator-active"><img src="../../assets/images/our_friends/arrow_active.png" alt="arrow"></button>
-                <button class="our-friends__button-paginator our-friends__button-paginator-active"><img src="../../assets/images/our_friends/arrows_active.png" alt="arrow"></button>
+                <button class="our-friends__button-paginator our-friends__b-p-inactive" id="button-left-first"><<</button>
+                <button class="our-friends__button-paginator our-friends__b-p-inactive" id="button-left"><</button>
+                <button class="our-friends__button-paginator our-friends__button-paginator-num" id="num_paginator">1</button>
+                <button class="our-friends__button-paginator" id="button-right">></button>
+                <button class="our-friends__button-paginator" id="button-right-last">>></button>
             </div>
         </div>
     </section>
@@ -101,6 +104,8 @@
             </div>
         </div>
         <script src="src/js/burger-pets.js"></script>
+        <script src="src/js/pagination-pets.js"></script>
+        <script src="./dist/main.js"></script>
     </footer>
 </body>
 </html>
