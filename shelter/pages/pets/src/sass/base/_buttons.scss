@@ -41,6 +41,9 @@
     background-color: transparent;
     cursor: pointer;
     @extend %transition;
+    @include font($size: 2.0rem, $height: 115%, $spacing: 0.06em);
+    color: $color-dark-3xl;
+    
 }
 
 .our-friends__b-p-inactive {
@@ -53,8 +56,6 @@
     background-color: $color-primary;
     border-color: $color-primary;
     @extend %font-add;
-    @include font($size: 2.0rem, $height: 115%, $spacing: 0.06em);
-    color: var(--color-dark-3xl);
 }
 
 .our-friends__button-paginator-active {
