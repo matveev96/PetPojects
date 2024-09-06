@@ -1,1 +1,0 @@
-console.log('100 баллов\nВсе пункты выполнены в полном объеме\n https://rolling-scopes-school.github.io/checklist/');
