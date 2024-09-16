@@ -1,0 +1,49 @@
+%humburger-line {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: $color-primary;
+    width: 100%;
+    height: 2px;
+}
+
+.humburger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    z-index: 999;
+    @extend %transition;
+    @include media-burger {
+        display: inline-block;
+    }
+    &::before {
+        @extend %humburger-line;
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        @extend %humburger-line;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.humburger.active {
+    transform: rotate(-90deg);
+}
+
+.humburger_line {
+    @extend %humburger-line;
+    top: calc(50% - 1px);
+    left: 0;
+}
+
+.background_screen.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $color-overlay;
+}

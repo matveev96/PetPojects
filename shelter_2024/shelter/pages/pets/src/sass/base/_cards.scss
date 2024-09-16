@@ -1,0 +1,30 @@
+// Our Friends
+.our-friends__card {
+    width: 270px;
+    padding-bottom: 30px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-light-s;
+    cursor: pointer;
+    @extend %transition;
+    &:hover {
+        box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+}
+
+.our-friends__card:hover .button{
+    background-color: $color-primary-light;
+    border-color: $color-primary-light;
+}
+
+.our-friends__card-title {
+    margin: 30px 0;
+}
+
+.our-friends__card-button {
+    padding-bottom: 100px;
+    padding-top: 60px;
+}

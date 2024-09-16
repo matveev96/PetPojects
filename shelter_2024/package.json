@@ -1,0 +1,20 @@
+{
+  "name": "matveev96-jsfepreschool2024q2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch shelter/pages/main/src/sass/style.scss shelter/pages/main/src/sass/style.css",
+    "style_pets": "sass --watch shelter/pages/pets/src/sass/style.scss shelter/pages/pets/src/sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.94.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
