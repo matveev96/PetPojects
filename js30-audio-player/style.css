@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background: no-repeat center url(./assets/img/lemonade.png) ;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.controls {
+    width: 300px;
+    height: 40px;
+    background-color: aliceblue;
+}
+
+.btn_play {
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/png/play.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn_pause {
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/png/pause.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
