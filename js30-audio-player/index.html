@@ -7,14 +7,58 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assets/play.png">
 </head>
-<body>
+<body class="body">
     <main>
         <div class="audio_wrapper">
-            <div class="cover"></div>
-            <div class="controls">
-                <div class="btn_play"></div>
-                <div class="btn_pause"></div>
+            <div class="cover">
+                <img src="./assets/img/lemonade.png" alt="album_cover" class="img_cover">
             </div>
+            <div class="controls">
+                <div class="timeline">
+                    <div class="line">
+                        <div class="line_progress"></div>
+                        <div class="knob"></div>
+                    </div>
+                    <div class="time">
+                        <div class="time_current">0:00</div>
+                        <div class="time_length">0:00</div>
+                    </div>
+                </div>
+                <div class="play_name">
+                    <div class="name">
+                        <span class="song_artist">Beyonce</span>
+                        <span class="song_name">Don't Hurt Yourself</span>
+                    </div>
+                    <div class="buttons">
+                        <div class="btn_repeat_one btn_none">
+                            <img src="./assets/png/repeat_one.png" alt="repeat_one">
+                        </div>
+                        <div class="btn_repeat">
+                            <img src="./assets/png/repeat.png" alt="repeat">
+                        </div>
+                        <div class="buttons_controls">
+                            <div class="btn_prev"></div>
+                            <div class="btn_play"></div>
+                            <div class="btn_next"></div>
+                        </div>
+                        <div class="volume_cotainer">
+                            <div class="btn_mute btn_none">
+                                <img src="./assets/png/volume_off.png" alt="volume_off.png">
+                            </div>
+                            <div class="btn_volume">
+                                <img src="./assets/png/volume_up.png" alt="volume_up">
+                            </div>
+                            <div class="volume_line">
+                                <div class="volume_progress"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                
+            </div>
+            
         </div>
     </main>
     <script src="./index.js"></script>
