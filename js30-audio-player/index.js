@@ -98,14 +98,6 @@ const playPrev = () => {
     playCover();
 };
 
-audio.addEventListener(
-    "loadeddata",
-    () => {
-      audioPlayer.querySelector(".time .time_length").textContent = getTimeCodeFromNum(audio.duration);
-      audio.volume = .75;},
-    false
-);
-
 function getTimeCodeFromNum(num) {
     let seconds = parseInt(num);
     let minutes = parseInt(seconds / 60);
@@ -137,31 +129,40 @@ timeline.addEventListener("click", e => {
   audio.currentTime = timeToSeek;
 }, false);
 
+audio.addEventListener(
+    "loadeddata",
+    () => {
+      audioPlayer.querySelector(".time .time_length").textContent = getTimeCodeFromNum(audio.duration);
+      audio.volume;
+      audioPlayer.querySelector(".volume_progress").style.height = audio.volume * 100 + '%';
+    },
+    false
+);
+
+volumeline.addEventListener("click", e => {
+    const volumelineHeight = window.getComputedStyle(volumeline).height;
+    const newVolume = e.offsetY / parseInt(volumelineHeight);
+    audio.volume = newVolume;
+    audioPlayer.querySelector(".volume_progress").style.height = newVolume * 100 + '%';
+  }, false
+);
+
 const volumeMute = () => {
-    if (audio.volume > 0) {
-        audio.volume = 0;
+    if (!audio.muted) {
+        audio.muted = true;
         btnMute.classList.remove("btn_none");
         btnVolume.classList.add("btn_none");
         
     } else {
-        audio.volume = .75;
+        audio.muted = false;
+        audio.volume;
         btnMute.classList.add("btn_none");
         btnVolume.classList.remove("btn_none");
     }
 }
 
-volumeline.addEventListener("click", e => {
-  const volumelineHeight = window.getComputedStyle(volumeline).height;
-  const newVolume = e.offsetY / parseInt(volumelineHeight);
-  
-  audio.volume = newVolume;
-  console.log(e.offsetY)
-  audioPlayer.querySelector(".volume_progress").style.height = newVolume * 100 + '%';
-}, false);
-
 const playRepeat = () => {
     playNum -= 0;
-
     isPlay = false;
     audio.src = musicArr[playNum];
     playAudio();
