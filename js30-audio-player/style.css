@@ -1,0 +1,365 @@
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/montserrat-v26-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("./assets/img/lemonade.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 5px 5px 25px black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.audio_wrapper {
+    height: 400pt;
+    width: 250pt;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 25px black;
+}
+
+.cover {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+}
+
+.img_cover {
+    width: 100%;
+    height: auto;
+    transform: scale(1.2);
+    transition: all 1s ease-out;
+}
+
+.img_cover_scale {
+    transform: scale(1.3);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: aliceblue;
+    height: 55px;
+    padding-top: 20px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #5f6368;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 10px;
+    background-color: #c1e5e2;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.line_progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #33ab9f;
+    transition: 0.5s;
+}
+
+.knob {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #5f6368;
+    border-radius: 50%;
+    cursor: pointer; /* Указываем, что можно перетаскивать */
+    pointer-events: all;
+    transition: 0.5s;
+}
+
+.controls {
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+}
+
+.play_name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 200px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.song_artist {
+    font-weight: 800;
+    color: #33ab9f;
+}
+
+.song_name {
+    color: #5f6368;
+}
+
+.btn_play {
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    background-image: url('./assets/png/play.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition: all .5s ease-out;
+    &:hover {
+        box-shadow: 0px 0px 25px #33ab9f;
+        background-color: #c1e5e2;
+    }
+}
+
+.btn_pause {
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    background-image: url('./assets/png/pause.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.buttons_controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    gap: 15px;
+}
+
+.btn_prev {
+    width: 35px;
+    height: 35px;
+    background-color: aliceblue;
+    background-image: url('./assets/png/backward.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition: all .5s ease-out;
+    &:hover {
+        background-color: #c1e5e2;
+    }
+}
+
+.btn_next {
+    width: 35px;
+    height: 35px;
+    background-color: aliceblue;
+    background-image: url('./assets/png/forward.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition: all .5s ease-out;
+    &:hover {
+        background-color: #c1e5e2;
+    }
+}
+
+.btn_mute {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease-out;
+    &:hover {
+        box-shadow: 0px 0px 25px #69f0ae;
+    }
+}
+
+.btn_none {
+    display: none;
+}
+
+.btn_mute img {
+    max-width: 100%;
+}
+
+.volume_cotainer {
+    position: relative;
+}
+
+.btn_volume img {
+    max-width: 100%;
+}
+
+.btn_volume {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn_volume:hover ~ .volume_line {
+    opacity: 1;
+    visibility: visible;
+}
+
+.volume_line {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: rotateX(180deg);
+    top: -70px;
+    left: 7.5px;
+    height: 70px;
+    width: 10px;
+    background-color: #c1e5e2;
+    cursor: pointer;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.btn_volume:hover ~ .volume_line,
+.volume_line:hover {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0px 0px 25px #69f0ae;
+}
+
+.volume_progress {
+    width: 10px;
+    background-color: #33ab9f;
+    transition: 0.25s;
+}
+
+.btn_repeat, .btn_repeat_one {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition: all .5s ease-out;
+    &:hover {
+        background-color: #b9f6ca;
+        box-shadow: 0px 0px 25px #69f0ae;
+    }
+}
+
+.btn_repeat img {
+    max-width: 100%;
+}
+
+.btn_repeat_one img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .volume_line {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0px 0px 25px #69f0ae;
+}
+}
+
+/* Footer */
+footer {
+    background-color: #C0C0C0;
+    opacity: .5;
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    opacity: 1;
+}
+
+.rs_task {
+    display: flex;
+    width: 5rem;
+    height: auto;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.github a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: all 0.8s ease;
+}
+
+.github a:hover {
+    color: #36454F;
+    opacity: 1;
+}
+
+.rs_img, .git_img {
+    width: 100%;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
