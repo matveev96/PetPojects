@@ -102,6 +102,7 @@ main {
     left: 0;
     height: 100%;
     background-color: #33ab9f;
+    transition: 0.5s;
 }
 
 .knob {
@@ -113,7 +114,8 @@ main {
     background-color: #5f6368;
     border-radius: 50%;
     cursor: pointer; /* Указываем, что можно перетаскивать */
-    pointer-events: all; 
+    pointer-events: all;
+    transition: 0.5s;
 }
 
 .controls {
@@ -149,11 +151,13 @@ main {
 .btn_play {
     width: 50px;
     height: 50px;
+    background-color: aliceblue;
     background-image: url('./assets/png/play.png');
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     border-radius: 50%;
+    border: none;
     transition: all .5s ease-out;
     &:hover {
         box-shadow: 0px 0px 25px #33ab9f;
@@ -164,6 +168,7 @@ main {
 .btn_pause {
     width: 50px;
     height: 50px;
+    background-color: aliceblue;
     background-image: url('./assets/png/pause.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,11 +193,13 @@ main {
 .btn_prev {
     width: 35px;
     height: 35px;
+    background-color: aliceblue;
     background-image: url('./assets/png/backward.png');
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     border-radius: 50%;
+    border: none;
     transition: all .5s ease-out;
     &:hover {
         background-color: #c1e5e2;
@@ -202,11 +209,13 @@ main {
 .btn_next {
     width: 35px;
     height: 35px;
+    background-color: aliceblue;
     background-image: url('./assets/png/forward.png');
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     border-radius: 50%;
+    border: none;
     transition: all .5s ease-out;
     &:hover {
         background-color: #c1e5e2;
@@ -234,7 +243,6 @@ main {
 
 .volume_cotainer {
     position: relative;
-
 }
 
 .btn_volume img {
@@ -277,6 +285,7 @@ main {
 .volume_progress {
     width: 10px;
     background-color: #33ab9f;
+    transition: 0.25s;
 }
 
 .btn_repeat, .btn_repeat_one {
@@ -304,4 +313,53 @@ main {
     visibility: visible;
     box-shadow: 0px 0px 25px #69f0ae;
 }
+}
+
+/* Footer */
+footer {
+    background-color: #C0C0C0;
+    opacity: .5;
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    opacity: 1;
+}
+
+.rs_task {
+    display: flex;
+    width: 5rem;
+    height: auto;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.github a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: all 0.8s ease;
+}
+
+.github a:hover {
+    color: #36454F;
+    opacity: 1;
+}
+
+.rs_img, .git_img {
+    width: 100%;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
 }
