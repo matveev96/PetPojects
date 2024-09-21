@@ -219,6 +219,9 @@ main {
     border-radius: 50%;
     cursor: pointer;
     transition: all .5s ease-out;
+    &:hover {
+        box-shadow: 0px 0px 25px #69f0ae;
+    }
 }
 
 .btn_none {
@@ -268,6 +271,7 @@ main {
 .volume_line:hover {
     opacity: 1;
     visibility: visible;
+    box-shadow: 0px 0px 25px #69f0ae;
 }
 
 .volume_progress {
@@ -279,6 +283,11 @@ main {
     cursor: pointer;
     width: 25px;
     height: 25px;
+    transition: all .5s ease-out;
+    &:hover {
+        background-color: #b9f6ca;
+        box-shadow: 0px 0px 25px #69f0ae;
+    }
 }
 
 .btn_repeat img {
@@ -287,4 +296,12 @@ main {
 
 .btn_repeat_one img {
     max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .volume_line {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0px 0px 25px #69f0ae;
+}
 }
