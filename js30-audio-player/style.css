@@ -129,6 +129,7 @@ main {
     flex-direction: column;
     gap: 5px;
     height: 200px;
+    background-color: aliceblue;
 }
 
 .name {
