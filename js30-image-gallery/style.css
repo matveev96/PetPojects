@@ -193,6 +193,10 @@
         top: .2rem;
         right: 1rem;
     }
+    .dark_mode {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
 }
 
 /* Footer */
