@@ -165,6 +165,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
+    transition: all 0.30s ease-in-out;
+    &:hover {
+        box-shadow: 0 0 .3rem  #26a69a;
+    }
 }
 
 @media (max-width: 768px) {
