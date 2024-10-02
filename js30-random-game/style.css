@@ -1,0 +1,122 @@
+/* open-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/open-sans-v40-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/open-sans-v40-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./assets/fonts/poppins-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* press-start-2p-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/press-start-2p-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas_div {
+    position: relative;
+}
+
+@keyframes MyAnimation {
+    from {
+        color: aliceblue;
+    }
+    to {
+        color: black;
+    }
+}
+
+.start_button {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+
+    background-color: transparent;
+    cursor: pointer;
+    transition: ease .5s all;
+    animation: MyAnimation 2s ease-in-out infinite;
+    &:hover {
+        box-shadow: 10px 10px  0px black;
+    }
+}
+
+.welcome_text {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    color: aliceblue;
+    text-align: center;
+    line-height: 2;
+}
+
+.description_text {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    line-height: 2;
+}
+
+.your_score {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    /* text-align: center; */
+    line-height: 2;
+    font-size: 14px;
+}
+
+.list_score {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+
+.list_item {
+    list-style: none;
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    line-height: 2;
+    font-size: 12px;
+}
+
+
