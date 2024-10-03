@@ -28,18 +28,23 @@
 /* press-start-2p-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
     src: url('./assets/fonts/press-start-2p-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body {
+    background-image: url(./assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .canvas_div {
@@ -55,8 +60,17 @@ body {
     }
 }
 
+@keyframes MyAnimationBg {
+    from {
+        background-color: #0ec442;
+    }
+    to {
+        background-color: rgb(135, 47, 217);
+    }
+}
+
 .start_button {
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
 
@@ -70,7 +84,7 @@ body {
 }
 
 .welcome_text {
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
     color: aliceblue;
@@ -79,16 +93,16 @@ body {
 }
 
 .description_text {
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
-    color: black;
+    color: white;
     text-align: center;
     line-height: 2;
 }
 
 .your_score {
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
     color: black;
@@ -98,7 +112,7 @@ body {
 }
 
 .list_score {
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
     color: black;
@@ -111,7 +125,7 @@ body {
 
 .list_item {
     list-style: none;
-    font-family: 'Press Start 2P';
+    font-family: 'PressStart2P';
     font-style: normal;
     font-weight: 400;
     color: black;
@@ -119,4 +133,66 @@ body {
     font-size: 12px;
 }
 
+.win_item {
+    animation: MyAnimation 2s ease-in-out infinite;
+    color: aliceblue;
+    
+}
 
+.timer,
+.attempts {
+    font-family: 'PressStart2P';
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    line-height: 2;
+    font-size: 14px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+
+/* Footer */
+
+.footer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 288px;
+    background-color: #6db682;
+}
+
+.rs_task {
+    display: flex;
+    width: 50px;
+    height: auto;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.github a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.github a:hover {
+    color: #26a69a;
+    opacity: 1;
+}
+
+.rs_img {
+    width: 100%;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
