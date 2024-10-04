@@ -1,3 +1,7 @@
+console.log(
+  "Игру тестировал на мониторах 60Гц и 100Гц. На 60Гц идет играбельней. Вероятно, если у вас монитор больше 100Гц - идти будет так себе, тем не менее в игре реализовано: Три уровня сложности. Чем больше уровень, тем быстрее двигаются колодцы и падает птичка. Ведется статистика: при неудачных попытках ведется таблица с 10 последними попытками, после десятой сбрасывается и все по новой. Также при достижении 20 поинтов показывается общее время, затраченное на игру и количество попыток. По завершению игры реализована кнопка Начачть новую игру, при нажатии на которую вы попадаете на стартовый экран. После недачной попытки (попадании птицы о землю, или колодцы) реализованы кнопки: продолжить играть на том же уровне, начать новую игру. Во время игры показывается текущий уровень и количество набранных баллов. \n\n Реализованы все пункты из ТЗ: \n1. Вёрстка 10+ \n2. Логика игры. Ходы, перемещения фигур, другие действия игрока подчиняются определённым свойственным игре правилам +10 \n3. Реализовано завершение игры при достижении игровой цели +10 \n4. По окончанию игры выводится её результат, например, количество ходов, время игры, набранные баллы, выигрыш или поражение и т.д +10 \n5. Есть таблица результатов, в которой сохраняются результаты 10 игр с наибольшим счетом (лучшим временем и т.п.) или просто 10 последних игр (хранится в local storage) +10 \n6. Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10  "
+);
+
 const cvs = document.getElementById("canvas");
 const ctx = cvs.getContext("2d");
 
@@ -27,10 +31,12 @@ gameAudio.src = "./assets/audio/continue-game.mp3";
 failAudio.src = "./assets/audio/fail-kurwa.mp3";
 winAudio.src = "./assets/audio/mission-complete.mp3";
 
+let moveUpLevel = 40;
+
 document.addEventListener("mousedown", moveUp);
 document.addEventListener("keydown", moveUp);
 function moveUp() {
-  yPos -= 40;
+  yPos -= moveUpLevel;
   flyAudio.play();
 }
 
@@ -48,7 +54,7 @@ let score = 0;
 let gameOver = false;
 let attempts = 0;
 let gameLevelVar = 1;
-let pipeSpeed = .8;
+let pipeSpeed = 0.8;
 
 const canvasDiv = document.querySelector(".canvas_div");
 
@@ -93,9 +99,9 @@ newGameButton.style.transform = "translate(-50%, -50%)";
 newGameButton.style.padding = "10px 20px";
 newGameButton.style.position = "absolute";
 canvasDiv.appendChild(newGameButton);
-newGameButton.addEventListener("click", ()=> {
-  location.reload()
-} );
+newGameButton.addEventListener("click", () => {
+  location.reload();
+});
 
 const description = document.createElement("p");
 description.className = "description_text";
@@ -145,232 +151,6 @@ listScore.style.width = "250px";
 listScore.style.display = "block";
 canvasDiv.appendChild(listScore);
 
-
-//GAME LEVEL
-const levelButtonOne = document.createElement("button");
-levelButtonOne.className = "level_button level_button_selected";
-levelButtonOne.innerHTML = "Level 1: Easy";
-levelButtonOne.style.top = "62%";
-canvasDiv.appendChild(levelButtonOne);
-
-const levelButtonTwo = document.createElement("button");
-levelButtonTwo.className = "level_button";
-levelButtonTwo.innerHTML = "Level 2: Medium";
-levelButtonTwo.style.top = "70%";
-canvasDiv.appendChild(levelButtonTwo);
-
-const levelButtonThree = document.createElement("button");
-levelButtonThree.className = "level_button";
-levelButtonThree.innerHTML = "Level 3: Hard";
-levelButtonThree.style.top = "78%";
-canvasDiv.appendChild(levelButtonThree);
-
-levelButtonOne.addEventListener("click", () => {
-  pipeSpeed = .8;
-  grav = 1;
-  gameLevelVar = 1;
-});
-levelButtonTwo.addEventListener("click", () => {
-  levelButtonOne.classList.remove("level_button_selected");
-  pipeSpeed = 1;
-  grav = 1.5;
-  gameLevelVar = 2;
-});
-levelButtonThree.addEventListener("click", () => {
-  levelButtonOne.classList.remove("level_button_selected");
-  pipeSpeed = 1.2;
-  grav = 1.7;
-  gameLevelVar = 3;
-});
-
-
-// START GAME
-function startGame() {
-  startGameAudio.play();
-  ctx.drawImage(bg, 0, 0);
-  yourScore.style.display = "none";
-  gameOverText.style.display = "none";
-  timerDiv.style.display = "none";
-  countAttempts.style.display = "none";
-}
-//RESTART GAME
-function restartGame() {
-  gameOver = false;
-  restartButton.style.display = "none";
-  pipe = [];
-  pipe[0] = { x: cvs.width, y: 0 };
-  xPos = 10;
-  yPos = 150;
-  score = 0;
-  draw();
-}
-restartButton.addEventListener("click", restartGame);
-
-//ARRAY OF SCORE
-let scoreArr = [];
-//SCORE CONTROL
-function scoreControl(score) {
-  let scoreAcc = "";
-  let scoreItem = `Score: ${score}`;
-
-  if (scoreArr.length >= 10) {
-    scoreArr = [scoreItem];
-    listScore.innerHTML = `<li class="list_item">${scoreArr.length} ${scoreArr[0]}</li>`;
-  } else {
-    scoreArr.push(scoreItem);
-  }
-
-  for (let i = 0; i < scoreArr.length; i++) {
-    scoreAcc += `<li class="list_item">${i + 1} ${
-      scoreArr[i]
-    }</li>`;
-    listScore.innerHTML = `${scoreAcc}`;
-  }
-}
-
-
-//PLAY ANIMATION
-function draw() {
-  if (gameOver) {
-    return;
-  }
-
-  startTimer();
-
-  startGameAudio.pause();
-  textWelcome.style.display = "none";
-  description.style.display = "none";
-  yourScore.style.display = "none";
-  listScore.style.display = "none";
-  yourScore.style.display = "none";
-  gameOverText.style.display = "none";
-  timerDiv.style.display = "none";
-  countAttempts.style.display = "none";
-  levelButtonOne.style.display = "none";
-  levelButtonTwo.style.display = "none";
-  levelButtonThree.style.display = "none";
-  newGameButton.style.display = "none";
-
-  gameAudio.play();
-  ctx.drawImage(bg, 0, 0);
-
-  for (let i = 0; i < pipe.length; i++) {
-    
-    ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
-    ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
-    pipe[i].x = pipe[i].x - pipeSpeed;
-
-    if (Math.floor(pipe[i].x) == 90) {
-      pipe.push({
-        x: cvs.width,
-        y: Math.floor(Math.random() * pipeUp.height) - pipeUp.height,
-      });
-    }
-
-    if (score >= 3) {
-      scoreArr = [];
-      stopTimer();
-      timer = 0;
-      attempts += 1;
-      countAttempts.innerHTML = `Count of attempts: ${attempts.toString()}`;
-      attempts = 0;
-      countAttempts.style.display = "block";
-      ctx.drawImage(bg, 0, 0);
-      
-      gameAudio.pause();
-      gameOver = true;
-      winAudio.play();
-
-
-      gameOverText.innerHTML = "YOU WIN!";
-      gameOverText.style.animation = "MyAnimationBg .2s ease-in-out infinite";
-      gameOverText.style.display = "block";
-      timerDiv.style.display = "block";
-
-      levelButtonOne.style.display = "none";
-      levelButtonTwo.style.display = "none";
-      levelButtonThree.style.display = "none";
-
-
-      newGameButton.style.top = "20%";
-      newGameButton.style.left = "48%";
-      
-      newGameButton.style.fontSize = "24px";
-      newGameButton.style.display = "block";
-
-      scoreWin.innerHTML = `Your score: ${score}`;
-      scoreWin.style.display = "block";
-      
-      ctx.fillText();
-
-      
-    }
-
-    if (
-      (xPos + bird.width >= pipe[i].x &&
-        xPos <= pipe[i].x + pipeUp.width &&
-        (yPos <= pipe[i].y + pipeUp.height ||
-          yPos + bird.height >= pipe[i].y + pipeUp.height + gap)) ||
-      yPos + bird.height >= cvs.height - fg.height
-    ) {
-      ctx.drawImage(bg, 0, 0);
-      gameAudio.pause();
-
-      gameOver = true;
-      restartButton.style.display = "block";
-      listScore.style.display = "block";
-      yourScore.style.display = "block";
-      gameOverText.style.display = "block";
-      gameOverText.style.animation = "none";
-      
-      timerDiv.style.display = "none";
-      countAttempts.style.display = "none";
-
-      levelButtonOne.style.display = "none";
-      levelButtonTwo.style.display = "none";
-      levelButtonThree.style.display = "none";
-
-      failAudio.play();
-      gameOverText.innerHTML = "GAME OVER!";
-
-      scoreControl(score);
-
-      restartButton.innerHTML = "Start Again";
-      restartButton.style.top = "10%";
-      restartButton.style.left = "48%";
-      restartButton.style.fontSize = "16px";
-
-      newGameButton.style.top = "25%";
-      newGameButton.style.left = "48%";
-      newGameButton.style.fontSize = "16px";
-      newGameButton.style.display = "block";
-
-      stopTimer();
-
-      attempts += 1;
-      return;
-    }
-
-    if (Math.floor(pipe[i].x) == 6) {
-      score++;
-      scoreAudio.play();
-    }
-  }
-
-  yPos += grav;
-
-  ctx.drawImage(fg, 0, cvs.height - fg.height);
-  ctx.drawImage(bird, xPos, yPos);
-
-  
-
-  ctx.fillStyle = "#000";
-  ctx.font = "16px PressStart2P";
-  ctx.fillText("Score:" + score, 10, cvs.height - 20);
-  ctx.fillText("Level:" + gameLevelVar, 10, cvs.height - 80);
-
-  requestAnimationFrame(draw);
-}
 //TIMER
 const timerDiv = document.createElement("div");
 timerDiv.className = "timer";
@@ -418,6 +198,222 @@ function startTimer() {
 
 function stopTimer() {
   clearInterval(timerInterval);
+}
+
+//GAME LEVEL
+const levelButtonOne = document.createElement("button");
+levelButtonOne.className = "level_button level_button_selected";
+levelButtonOne.innerHTML = "Level 1: Easy";
+levelButtonOne.style.top = "62%";
+canvasDiv.appendChild(levelButtonOne);
+
+const levelButtonTwo = document.createElement("button");
+levelButtonTwo.className = "level_button";
+levelButtonTwo.innerHTML = "Level 2: Medium";
+levelButtonTwo.style.top = "70%";
+canvasDiv.appendChild(levelButtonTwo);
+
+const levelButtonThree = document.createElement("button");
+levelButtonThree.className = "level_button";
+levelButtonThree.innerHTML = "Level 3: Hard";
+levelButtonThree.style.top = "78%";
+canvasDiv.appendChild(levelButtonThree);
+
+levelButtonOne.addEventListener("click", () => {
+  pipeSpeed = 0.6;
+  moveUpLevel = 40;
+  grav = 1;
+  gameLevelVar = 1;
+});
+levelButtonTwo.addEventListener("click", () => {
+  levelButtonOne.classList.remove("level_button_selected");
+  pipeSpeed = 1;
+  moveUpLevel = 45;
+  grav = 1.5;
+  gameLevelVar = 2;
+});
+levelButtonThree.addEventListener("click", () => {
+  levelButtonOne.classList.remove("level_button_selected");
+  pipeSpeed = 1.5;
+  moveUpLevel = 48;
+  grav = 1.7;
+  gameLevelVar = 3;
+});
+
+// START GAME
+function startGame() {
+  startGameAudio.play();
+  ctx.drawImage(bg, 0, 0);
+  yourScore.style.display = "none";
+  gameOverText.style.display = "none";
+  timerDiv.style.display = "none";
+  countAttempts.style.display = "none";
+}
+//RESTART GAME
+function restartGame() {
+  gameOver = false;
+  restartButton.style.display = "none";
+  pipe = [];
+  pipe[0] = { x: cvs.width, y: 0 };
+  xPos = 10;
+  yPos = 150;
+  score = 0;
+  draw();
+}
+restartButton.addEventListener("click", restartGame);
+
+//ARRAY OF SCORE
+let scoreArr = [];
+//SCORE CONTROL
+function scoreControl(score) {
+  let scoreAcc = "";
+  let scoreItem = `Score: ${score}`;
+
+  if (scoreArr.length >= 10) {
+    scoreArr = [scoreItem];
+    listScore.innerHTML = `<li class="list_item">${scoreArr.length} ${scoreArr[0]}</li>`;
+  } else {
+    scoreArr.push(scoreItem);
+  }
+
+  for (let i = 0; i < scoreArr.length; i++) {
+    scoreAcc += `<li class="list_item">${i + 1} ${scoreArr[i]}</li>`;
+    listScore.innerHTML = `${scoreAcc}`;
+  }
+}
+
+//PLAY ANIMATION
+function draw() {
+  if (gameOver) {
+    return;
+  }
+
+  startTimer();
+
+  startGameAudio.pause();
+  textWelcome.style.display = "none";
+  description.style.display = "none";
+  yourScore.style.display = "none";
+  listScore.style.display = "none";
+  yourScore.style.display = "none";
+  gameOverText.style.display = "none";
+  timerDiv.style.display = "none";
+  countAttempts.style.display = "none";
+  levelButtonOne.style.display = "none";
+  levelButtonTwo.style.display = "none";
+  levelButtonThree.style.display = "none";
+  newGameButton.style.display = "none";
+
+  gameAudio.play();
+  ctx.drawImage(bg, 0, 0);
+
+  for (let i = 0; i < pipe.length; i++) {
+    ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
+    ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
+    pipe[i].x = pipe[i].x - pipeSpeed;
+
+    if (Math.floor(pipe[i].x) == 90) {
+      pipe.push({
+        x: cvs.width,
+        y: Math.floor(Math.random() * pipeUp.height) - pipeUp.height,
+      });
+    }
+
+    if (score >= 20) {
+      scoreArr = [];
+      stopTimer();
+      timer = 0;
+      attempts += 1;
+      countAttempts.innerHTML = `Count of attempts: ${attempts.toString()}`;
+      attempts = 0;
+      countAttempts.style.display = "block";
+      ctx.drawImage(bg, 0, 0);
+
+      gameAudio.pause();
+      gameOver = true;
+      winAudio.play();
+
+      gameOverText.innerHTML = "YOU WIN!";
+      gameOverText.style.animation = "MyAnimationBg .2s ease-in-out infinite";
+      gameOverText.style.display = "block";
+      timerDiv.style.display = "block";
+
+      levelButtonOne.style.display = "none";
+      levelButtonTwo.style.display = "none";
+      levelButtonThree.style.display = "none";
+
+      newGameButton.style.top = "20%";
+      newGameButton.style.left = "48%";
+
+      newGameButton.style.fontSize = "24px";
+      newGameButton.style.display = "block";
+
+      scoreWin.innerHTML = `Your score: ${score}`;
+      scoreWin.style.display = "block";
+
+      ctx.fillText();
+    }
+
+    if (
+      (xPos + bird.width >= pipe[i].x &&
+        xPos <= pipe[i].x + pipeUp.width &&
+        (yPos <= pipe[i].y + pipeUp.height ||
+          yPos + bird.height >= pipe[i].y + pipeUp.height + gap)) ||
+      yPos + bird.height >= cvs.height - fg.height
+    ) {
+      ctx.drawImage(bg, 0, 0);
+      gameAudio.pause();
+
+      gameOver = true;
+      restartButton.style.display = "block";
+      listScore.style.display = "block";
+      yourScore.style.display = "block";
+      gameOverText.style.display = "block";
+      gameOverText.style.animation = "none";
+
+      timerDiv.style.display = "none";
+      countAttempts.style.display = "none";
+
+      levelButtonOne.style.display = "none";
+      levelButtonTwo.style.display = "none";
+      levelButtonThree.style.display = "none";
+
+      failAudio.play();
+      gameOverText.innerHTML = "GAME OVER!";
+
+      scoreControl(score);
+
+      restartButton.innerHTML = "Start Again";
+      restartButton.style.top = "10%";
+      restartButton.style.left = "48%";
+      restartButton.style.fontSize = "16px";
+
+      newGameButton.style.top = "25%";
+      newGameButton.style.left = "48%";
+      newGameButton.style.fontSize = "16px";
+      newGameButton.style.display = "block";
+
+      attempts += 1;
+      return;
+    }
+
+    if (Math.floor(pipe[i].x) == 6) {
+      score++;
+      scoreAudio.play();
+    }
+  }
+
+  yPos += grav;
+
+  ctx.drawImage(fg, 0, cvs.height - fg.height);
+  ctx.drawImage(bird, xPos, yPos);
+
+  ctx.fillStyle = "#000";
+  ctx.font = "16px PressStart2P";
+  ctx.fillText("Score:" + score, 10, cvs.height - 20);
+  ctx.fillText("Level:" + gameLevelVar, 10, cvs.height - 80);
+
+  requestAnimationFrame(draw);
 }
 
 pipeBottom.onload = startGame;
