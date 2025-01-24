@@ -2,7 +2,7 @@
 
 ## Shelter Web-Site 🐶
 
-### Technology stack
+### Technology stack:
 * JavaScript
 * SASS
 * CSS
@@ -16,7 +16,7 @@ A website for an animal shelter. Two pages have been implemented: the main infor
 
 ## FlappyBird Game 🐤
 
-### Technology stack
+### Technology stack:
 * JavaScript
 * Canvas
 * CSS
@@ -29,6 +29,8 @@ A prototype of the Flappy Bird game. The game features: three difficulty levels.
 **https://rolling-scopes-school.github.io/matveev96-JSFEPRESCHOOL2024Q2/js30-random-game/**
 
 ## Image Gallery Unsplash API 🏞
+
+### Technology stack:
 * JavaScript
 * CSS
 * HTML
@@ -40,6 +42,8 @@ In the gallery, an asynchronous request is made to the Unsplash server to fetch 
 **https://rolling-scopes-school.github.io/matveev96-JSFEPRESCHOOL2024Q2/js30-image-gallery/**
 
 ## Audio Player 🎶
+
+### Technology stack:
 * JavaScript
 * Canvas
 * CSS
